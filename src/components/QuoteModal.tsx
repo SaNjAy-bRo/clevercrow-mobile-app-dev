@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { X } from "lucide-react";
 
 interface ModalProps {
   isOpen: boolean;
@@ -49,7 +50,7 @@ export default function QuoteModal({ isOpen, title, onClose }: ModalProps) {
             className="text-slate-400 hover:text-slate-600 transition p-1" 
             aria-label="Close form"
           >
-            <ion-icon name="close" className="text-2xl"></ion-icon>
+            <X className="text-2xl" />
           </button>
         </div>
 

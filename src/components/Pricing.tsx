@@ -1,3 +1,4 @@
+import { CheckCircle2 } from "lucide-react";
 export default function Pricing() {
   return (
     <section id="pricing" className="bg-slate-50 py-16 sm:py-24">
@@ -17,27 +18,27 @@ export default function Pricing() {
             </div>
             <ul className="mt-8 space-y-4 flex-1">
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>React Native / Flutter Framework</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>iOS & Android Deployment</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>Up to 10 Essential Screens</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>Firebase Authentication</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>Standard UI/UX Guidelines</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>Basic Admin Dashboard (Web)</span>
               </li>
             </ul>
@@ -56,27 +57,27 @@ export default function Pricing() {
             </div>
             <ul className="mt-8 space-y-4 flex-1">
               <li className="flex gap-3 text-sm text-slate-200">
-                <ion-icon name="checkmark-circle" class="text-brand-amber text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-amber text-xl shrink-0" />
                 <span>Everything in Starter, plus:</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-200">
-                <ion-icon name="checkmark-circle" class="text-brand-amber text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-amber text-xl shrink-0" />
                 <span>Custom Unique UI/UX Design</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-200">
-                <ion-icon name="checkmark-circle" class="text-brand-amber text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-amber text-xl shrink-0" />
                 <span>Push Notifications Integration</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-200">
-                <ion-icon name="checkmark-circle" class="text-brand-amber text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-amber text-xl shrink-0" />
                 <span>Payment Gateway Integration</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-200">
-                <ion-icon name="checkmark-circle" class="text-brand-amber text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-amber text-xl shrink-0" />
                 <span>Advanced Admin & Analytics Dashboard</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-200">
-                <ion-icon name="checkmark-circle" class="text-brand-amber text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-amber text-xl shrink-0" />
                 <span>App Store & Google Play Publishing</span>
               </li>
             </ul>
@@ -94,27 +95,27 @@ export default function Pricing() {
             </div>
             <ul className="mt-8 space-y-4 flex-1">
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>Everything in Business, plus:</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>Native Swift/Kotlin Options</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>Complex API & Third-Party Integrations</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>Real-time Chat / Video Calling</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>Machine Learning & IoT Features</span>
               </li>
               <li className="flex gap-3 text-sm text-slate-700">
-                <ion-icon name="checkmark-circle" class="text-brand-leaf text-xl shrink-0"></ion-icon>
+                <CheckCircle2 className="text-brand-leaf text-xl shrink-0" />
                 <span>Dedicated Success Manager</span>
               </li>
             </ul>

@@ -1,4 +1,5 @@
 'use client';
+import { FileText, Phone } from "lucide-react";
 
 export default function StickyCTA({ onOpenModal }: { onOpenModal: (title: string) => void }) {
   return (
@@ -9,7 +10,7 @@ export default function StickyCTA({ onOpenModal }: { onOpenModal: (title: string
           onClick={() => onOpenModal('Get a Quote')}
           className="sticky-cta-btn sticky-cta-primary"
         >
-          <ion-icon name="document-text-outline"></ion-icon>
+          <FileText className="" />
           <span>Request a Quote</span>
         </button>
         <button 
@@ -17,7 +18,7 @@ export default function StickyCTA({ onOpenModal }: { onOpenModal: (title: string
           onClick={() => onOpenModal('Request a Call Back')}
           className="sticky-cta-btn sticky-cta-secondary"
         >
-          <ion-icon name="call-outline"></ion-icon>
+          <Phone className="" />
           <span>Request Call Back</span>
         </button>
       </div>

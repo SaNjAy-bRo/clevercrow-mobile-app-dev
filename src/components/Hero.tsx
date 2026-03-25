@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { Smartphone, Users, Rocket, Zap, Cpu } from "lucide-react";
 
 export default function Hero() {
   const parallaxRootRef = useRef<HTMLElement>(null);
@@ -94,26 +95,26 @@ export default function Hero() {
             
             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-lg">
               <div className="flex items-center gap-3 rounded-2xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur-md shadow-sm">
-                <ion-icon name="logo-apple" className="text-[#61DAFB] text-xl"></ion-icon>
+                <Smartphone className="text-[#61DAFB] text-xl" />
                 <span className="text-sm font-semibold text-slate-100">iOS & Android Apps</span>
               </div>
               <div className="flex items-center gap-3 rounded-2xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur-md shadow-sm">
-                <ion-icon name="people-outline" className="text-emerald-400 text-xl"></ion-icon>
+                <Users className="text-emerald-400 text-xl" />
                 <span className="text-sm font-semibold text-slate-100">550+ Happy Clients</span>
               </div>
               <div className="flex items-center gap-3 rounded-2xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur-md shadow-sm">
-                <ion-icon name="rocket-outline" className="text-purple-400 text-xl"></ion-icon>
+                <Rocket className="text-purple-400 text-xl" />
                 <span className="text-sm font-semibold text-slate-100">Fast App Store Launch</span>
               </div>
               <div className="flex items-center gap-3 rounded-2xl bg-white/5 border border-white/10 px-4 py-3 backdrop-blur-md shadow-sm">
-                <ion-icon name="flash-outline" className="text-amber-400 text-xl"></ion-icon>
+                <Zap className="text-amber-400 text-xl" />
                 <span className="text-sm font-semibold text-slate-100">Seamless Experience</span>
               </div>
             </div>
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a href="#tech-stack" className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-amber text-brand-night px-8 py-4 text-sm font-bold transition hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.3)] shadow-lg">
-                <ion-icon name="hardware-chip-outline" className="text-lg"></ion-icon>Explore Our App Stack
+                <Cpu className="text-lg" />Explore Our App Stack
               </a>
               <button data-open-modal data-modal-title="Request App Proposal" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white transition hover:bg-white/10 backdrop-blur-md">
                 Get a Quote

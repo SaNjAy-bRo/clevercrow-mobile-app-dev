@@ -82,7 +82,7 @@ export default function Home() {
       <TechStack />
       <Pricing />
       <CTABanner />
-      {/* <Portfolio /> */}
+      <Portfolio />
       <Testimonials />
       <FAQ />
       <Footer />

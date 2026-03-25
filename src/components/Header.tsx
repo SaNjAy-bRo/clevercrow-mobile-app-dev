@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { Phone, MessageCircle } from "lucide-react";
 
 export default function Header() {
   const gtag_report_conversion = (url: string) => {
@@ -24,7 +25,7 @@ export default function Header() {
             }}
             className="inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand-amber px-3 py-2 text-xs font-bold text-slate-900 transition hover:brightness-95 sm:flex-none sm:px-4 sm:text-sm"
           >
-            <ion-icon name="call"></ion-icon>
+            <Phone className="" />
             <span className="hidden lg:inline mr-1">Call: </span><span>09986389444</span>
           </a>
           <a
@@ -33,7 +34,7 @@ export default function Header() {
             rel="noopener"
             className="inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand-leaf px-3 py-2 text-xs font-bold text-white transition hover:brightness-110 sm:flex-none sm:px-4 sm:text-sm"
           >
-            <ion-icon name="logo-whatsapp"></ion-icon>WhatsApp
+            <MessageCircle className="" />WhatsApp
           </a>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { Smartphone, Database, MessageSquare, Image, Circle } from "lucide-react";
 export default function TechStack() {
   return (
     <section id="tech-stack" className="relative overflow-hidden bg-[#030712] py-16 text-white sm:py-24 lg:py-32">
@@ -19,18 +20,18 @@ export default function TechStack() {
         <div className="relative mx-auto mt-12 sm:mt-16 max-w-5xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-6 border-y border-white/5">
           <div className="flex w-max animate-marquee items-center text-slate-400">
             <div className="flex items-center justify-around gap-12 sm:gap-16 pr-12 sm:pr-16 line-clamp-1">
-              <div className="flex items-center gap-2 sm:gap-3"><ion-icon name="logo-apple" className="text-[20px] sm:text-2xl text-white"></ion-icon><span className="font-display text-base sm:text-lg font-bold text-white">Swift</span></div>
-              <div className="flex items-center gap-2 sm:gap-3"><ion-icon name="logo-android" className="text-[20px] sm:text-2xl text-[#3DDC84]"></ion-icon><span className="font-display text-base sm:text-lg font-bold text-white">Kotlin</span></div>
+              <div className="flex items-center gap-2 sm:gap-3"><Smartphone className="text-[20px] sm:text-2xl text-white" /><span className="font-display text-base sm:text-lg font-bold text-white">Swift</span></div>
+              <div className="flex items-center gap-2 sm:gap-3"><Smartphone className="text-[20px] sm:text-2xl text-[#3DDC84]" /><span className="font-display text-base sm:text-lg font-bold text-white">Kotlin</span></div>
               <div className="flex items-center gap-2 sm:gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348" className="h-5 w-5 sm:h-6 sm:w-6 text-[#61DAFB]"><circle cx="0" cy="0" r="2.05" fill="currentColor"/><g stroke="currentColor" strokeWidth="1" fill="none"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg><span className="font-display text-base sm:text-lg font-bold text-white">React Native</span></div>
               <div className="flex items-center gap-2 sm:gap-3"><svg viewBox="0 0 100 100" className="h-5 w-5 sm:h-6 sm:w-6 text-[#54C5F8]"><path d="M50 10L10 50l40 40 40-40L50 10z" fill="currentColor"/></svg><span className="font-display text-base sm:text-lg font-bold text-white">Flutter</span></div>
-              <div className="flex items-center gap-2 sm:gap-3"><ion-icon name="logo-firebase" className="text-[20px] sm:text-2xl text-[#FFCA28]"></ion-icon><span className="font-display text-base sm:text-lg font-bold text-white">Firebase</span></div>
+              <div className="flex items-center gap-2 sm:gap-3"><Database className="text-[20px] sm:text-2xl text-[#FFCA28]" /><span className="font-display text-base sm:text-lg font-bold text-white">Firebase</span></div>
             </div>
             <div className="flex items-center justify-around gap-12 sm:gap-16 pr-12 sm:pr-16" aria-hidden="true">
-              <div className="flex items-center gap-2 sm:gap-3"><ion-icon name="logo-apple" className="text-[20px] sm:text-2xl text-white"></ion-icon><span className="font-display text-base sm:text-lg font-bold text-white">Swift</span></div>
-              <div className="flex items-center gap-2 sm:gap-3"><ion-icon name="logo-android" className="text-[20px] sm:text-2xl text-[#3DDC84]"></ion-icon><span className="font-display text-base sm:text-lg font-bold text-white">Kotlin</span></div>
+              <div className="flex items-center gap-2 sm:gap-3"><Smartphone className="text-[20px] sm:text-2xl text-white" /><span className="font-display text-base sm:text-lg font-bold text-white">Swift</span></div>
+              <div className="flex items-center gap-2 sm:gap-3"><Smartphone className="text-[20px] sm:text-2xl text-[#3DDC84]" /><span className="font-display text-base sm:text-lg font-bold text-white">Kotlin</span></div>
               <div className="flex items-center gap-2 sm:gap-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348" className="h-5 w-5 sm:h-6 sm:w-6 text-[#61DAFB]"><circle cx="0" cy="0" r="2.05" fill="currentColor"/><g stroke="currentColor" strokeWidth="1" fill="none"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg><span className="font-display text-base sm:text-lg font-bold text-white">React Native</span></div>
               <div className="flex items-center gap-2 sm:gap-3"><svg viewBox="0 0 100 100" className="h-5 w-5 sm:h-6 sm:w-6 text-[#54C5F8]"><path d="M50 10L10 50l40 40 40-40L50 10z" fill="currentColor"/></svg><span className="font-display text-base sm:text-lg font-bold text-white">Flutter</span></div>
-              <div className="flex items-center gap-2 sm:gap-3"><ion-icon name="logo-firebase" className="text-[20px] sm:text-2xl text-[#FFCA28]"></ion-icon><span className="font-display text-base sm:text-lg font-bold text-white">Firebase</span></div>
+              <div className="flex items-center gap-2 sm:gap-3"><Database className="text-[20px] sm:text-2xl text-[#FFCA28]" /><span className="font-display text-base sm:text-lg font-bold text-white">Firebase</span></div>
             </div>
           </div>
         </div>
@@ -101,10 +102,10 @@ export default function TechStack() {
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
               <button type="button" data-open-modal data-modal-title="Talk to an App Expert" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#61DAFB] px-6 py-4 font-bold text-slate-900 transition hover:bg-[#4faad1] shadow-[0_10px_30px_-5px_rgba(97,218,251,0.5)] w-full sm:w-auto">
-                 <ion-icon name="chatbubbles" class="text-lg"></ion-icon> Talk to an App Expert
+                 <MessageSquare className="text-lg" /> Talk to an App Expert
               </button>
               <a href="#portfolio" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-4 font-bold text-white transition hover:bg-white/15 w-full sm:w-auto">
-                 <ion-icon name="images-outline" class="text-lg"></ion-icon> See Our Portfolio
+                 <Image className="text-lg" /> See Our Portfolio
               </a>
             </div>
           </div>
@@ -124,7 +125,7 @@ export default function TechStack() {
                 </div>
                 <div className="text-[10px] sm:text-xs font-mono font-medium text-slate-600 bg-slate-100 rounded px-2 py-0.5 border border-slate-200">App_Bridge.swift</div>
                 <div className="flex items-center gap-1.5 text-emerald-600 text-[10px] sm:text-xs font-mono animate-pulse">
-                  <ion-icon name="ellipse"></ion-icon> Live Build
+                  <Circle className="" /> Live Build
                 </div>
               </div>
 

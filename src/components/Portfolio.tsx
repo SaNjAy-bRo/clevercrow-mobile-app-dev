@@ -3,75 +3,136 @@
 import { useState } from 'react';
 
 const portfolioData = {
-  ecommerce: [
-    { name: 'Baatu', url: 'https://www.baatu.in/', img: '/images/baatu.webp' },
-    { name: 'Gatodates', url: 'https://gatodates.com/', img: '/images/gatodates.webp' },
-    { name: 'Artebella', url: 'https://artebella.in/', img: '/images/artebella.webp' },
-    { name: 'Bella Lash', url: 'https://bellalash.com/', img: '/images/bellalash.webp' },
-    { name: 'British Darts', url: 'https://britishdarts.com/', img: '/images/britishdarts.webp' },
-    { name: 'Anatomy Fitness', url: 'https://anatomyfitness.co/', img: '/images/anatomyfitness.webp' },
-  ],
-  healthcare: [
-    { name: 'Alchemist Pharmarx', url: 'https://alchemistpharmarx.com/', img: '/images/alchemistpharmarx.webp' },
-    { name: 'Better Tomorrow', url: 'https://bettertomorrowtc.com/', img: '/images/bettertomorrowtc.webp' },
-    { name: 'DDC Smiles', url: 'https://ddcsmiles.in/', img: '/images/ddcsmiles.webp' },
-    { name: 'Gateway Foundation', url: 'https://www.gatewayfoundation.org', img: '/images/gatewayfoundation.webp' },
-    { name: 'Lakeview Health', url: 'https://www.lakeviewhealth.com', img: '/images/lakeviewhealth.webp' },
-    { name: 'SL Compounding', url: 'https://slcompounding.com', img: '/images/slcompounding.webp' },
+  travel: [
+    { name: 'Traveloka', img: '/mobile apps/traveloka.jpg', tech: 'Flutter, Node.js', url: 'https://play.google.com/store/apps/details?id=com.traveloka.android' },
+    { name: 'Hotel Tonight', img: '/mobile apps/hotel tonight.jpg', tech: 'React Native, Elixir', url: 'https://play.google.com/store/apps/details?id=com.hoteltonight.android.prod' },
+    { name: 'RateHawk', img: '/mobile apps/RateHawk for Professionals.jpg', tech: 'React Native, Python', url: 'https://play.google.com/store/apps/details?id=com.ratehawk.android' },
+    { name: 'ZenHotels', img: '/mobile apps/ZenHotels.jpg', tech: 'Flutter, Ruby on Rails', url: 'https://play.google.com/store/apps/details?id=com.zenhotels.android' },
+    { name: 'Treebo', img: '/mobile apps/treebo.jpg', tech: 'React Native, Spring', url: 'https://play.google.com/store/apps/details?id=com.treebo.starscream' },
+    { name: 'Stayflexi', img: '/mobile apps/Stayflexi.jpg', tech: 'Kotlin, Firebase', url: 'https://play.google.com/store/apps/details?id=com.stayflexi.platform' },
+    { name: 'FabHotels', img: '/mobile apps/FabHotels .jpg', tech: 'Kotlin, Swift', url: 'https://play.google.com/store/apps/details?id=com.fabhotels.guests' },
+    { name: 'Dayuse', img: '/mobile apps/Dayuse.jpg', tech: 'React Native, Node.js', url: 'https://play.google.com/store/apps/details?id=com.dayuse_hotels.dayuseus' },
+    { name: 'ResortPass', img: '/mobile apps/ResortPass.jpg', tech: 'Flutter, Go', url: 'https://play.google.com/store/apps/details?id=com.resortpass.app' },
+    { name: 'Jumeirah', img: '/mobile apps/Jumeirah .jpg', tech: 'Flutter, PHP', url: 'https://play.google.com/store/apps/details?id=com.jumeirah' },
+    { name: 'Cheap Hotels', img: '/mobile apps/Cheap Hotels.jpg', tech: 'Flutter, Firebase', url: 'https://play.google.com/store/apps/details?id=com.hotels70.hotelbooking' },
+    { name: 'Tripmasters', img: '/mobile apps/tripmasters .jpg', tech: 'Kotlin, PostgreSQL', url: 'https://apps.apple.com/in/app/tripmasters/id1178125920' },
+    { name: 'Roomsy', img: '/mobile apps/Roomsy.jpg', tech: 'React Native, AWS', url: 'https://play.google.com/store/apps/details?id=com.ekinsdrow.roomsy' },
   ],
   education: [
-    { name: 'Ad Critter', url: 'https://adcritter.ai/', img: '/images/adcritter.webp' },
-    { name: 'Carver Aviation', url: 'https://carveraviation.com/', img: '/images/carveraviation.webp' },
-    { name: 'Intryc', url: 'https://www.intryc.com', img: '/images/intryc.webp' },
-    { name: 'People Manager', url: 'https://peoplemanager.co/', img: '/images/peoplemanager.webp' },
-    { name: 'Rollins', url: 'https://www.rollins.edu', img: '/images/rollins.webp' },
-    { name: 'WGU', url: 'https://www.wgu.edu', img: '/images/wgu.webp' },
+    { name: 'ClassDojo', img: '/mobile apps/ClassDojo.jpg', tech: 'Flutter, Firebase', url: 'https://play.google.com/store/apps/details?id=com.classdojo.android' },
+    { name: 'Elevate', img: '/mobile apps/Elevate.jpg', tech: 'React Native, Node.js', url: 'https://play.google.com/store/apps/details?id=com.wonder' },
+    { name: 'Epic', img: '/mobile apps/Epic.jpg', tech: 'Kotlin, Swift', url: 'https://play.google.com/store/apps/details?id=com.getepic.Epic' },
+    { name: 'Mathway', img: '/mobile apps/Mathway.jpg', tech: 'Flutter, Python', url: 'https://play.google.com/store/apps/details?id=com.bagatrix.mathway.android' },
+    { name: 'ParentSquare', img: '/mobile apps/ParentSquare.jpg', tech: 'React Native, Ruby', url: 'https://play.google.com/store/apps/details?id=com.parentsquare.psapp' },
+    { name: 'Remind', img: '/mobile apps/Remind.jpg', tech: 'Flutter, Go', url: 'https://play.google.com/store/apps/details?id=com.remind101' },
+    { name: 'Seesaw', img: '/mobile apps/seesaw.jpg', tech: 'React Native, AWS', url: 'https://play.google.com/store/apps/details?id=com.seesaw' },
+    { name: 'StudyDrive', img: '/mobile apps/StudyDrive.jpg', tech: 'Kotlin, Firebase', url: 'https://play.google.com/store/apps/details?id=me.drashti.studydrive' },
+    { name: 'StudySmarter', img: '/mobile apps/StudySmarter.jpg', tech: 'Flutter, Node.js', url: 'https://play.google.com/store/apps/details?id=com.studysmarter' },
+    { name: 'Top Hat', img: '/mobile apps/top hat better learning.jpg', tech: 'React Native, Spring', url: 'https://apps.apple.com/to/app/top-hat-better-learning/id674069291' },
+    { name: 'UPSC Exam Prep', img: '/mobile apps/UPSC.jpg', tech: 'Kotlin, PostgreSQL', url: 'https://play.google.com/store/apps/details?id=com.crackittoday.upsc' },
+    { name: 'Zutobi', img: '/mobile apps/Zutobi.jpg', tech: 'Flutter, Ruby', url: 'https://play.google.com/store/apps/details?id=com.driverlicenseapp' },
+    { name: 'PictureThis', img: '/mobile apps/PictureThis.jpg', tech: 'Kotlin, Firebase', url: 'https://play.google.com/store/apps/details?id=cn.danatech.xingseus' },
+  ],
+  food: [
+    { name: 'Grubhub', img: '/mobile apps/Grubhub .jpg', tech: 'React Native, Node.js', url: 'https://play.google.com/store/apps/details?id=com.grubhub.android' },
+    { name: 'Just Eat', img: '/mobile apps/just eat.jpg', tech: 'Flutter, Python', url: 'https://play.google.com/store/apps/details?id=com.justeat.app.uk' },
+    { name: 'Bolt Food', img: '/mobile apps/bolt food.jpg', tech: 'Kotlin, Swift', url: 'https://play.google.com/store/apps/details?id=com.bolt.deliveryclient' },
+    { name: 'Cookr', img: '/mobile apps/Cookr.jpg', tech: 'Flutter, Firebase', url: 'https://play.google.com/store/apps/details?id=com.cookr.customer' },
+  ],
+  ecommerce: [
+    { name: 'Krave Mart', img: '/mobile apps/krave mart.jpg', tech: 'React Native, Ruby', url: 'https://play.google.com/store/apps/details?id=com.krrave.customer' },
+    { name: 'Banggood', img: '/mobile apps/Banggod.jpg', tech: 'React Native, AWS', url: 'https://play.google.com/store/apps/details?id=com.banggood.client' },
+    { name: 'MaviGadget', img: '/mobile apps/mavigadget.jpg', tech: 'React Native, Ruby', url: 'https://play.google.com/store/apps/details?id=co.tapcart.app.id_Klb0b0VCJq' },
+    { name: 'Alpaka', img: '/mobile apps/alpaka.jpg', tech: 'Flutter, Python', url: 'https://play.google.com/store/apps/details?id=co.tapcart.app.id_3pZUUpeL9G' },
+  ],
+  realestate: [
+    { name: 'Propin', img: '/mobile apps/Propin.jpg', tech: 'Flutter, Firebase', url: 'https://play.google.com/store/apps/details?id=com.frontfootlabs.propin' },
+    { name: 'Redfin', img: '/mobile apps/redfine 2.jpg', tech: 'Kotlin, Swift', url: 'https://play.google.com/store/apps/details?id=com.redfin.android' },
+    { name: 'ACN', img: '/mobile apps/ACN.jpg', tech: 'Flutter, Go', url: 'https://play.google.com/store/apps/details?id=com.acnonline.in' },
+    { name: 'Trulia', img: '/mobile apps/Trulia.jpg', tech: 'React Native, Node.js', url: 'https://play.google.com/store/apps/details?id=com.trulia.android' },
   ],
 };
 
-type TabType = keyof typeof portfolioData;
+type CategoryType = keyof typeof portfolioData | 'all';
 
 export default function Portfolio() {
-  const [activeTab, setActiveTab] = useState<TabType>('ecommerce');
+  const [activeTab, setActiveTab] = useState<CategoryType>('all');
+
+  const getPortfolioItems = () => {
+    if (activeTab === 'all') {
+      return [...portfolioData.travel, ...portfolioData.education, ...portfolioData.food, ...portfolioData.ecommerce, ...portfolioData.realestate];
+    }
+    return portfolioData[activeTab];
+  };
+
+  const displayItems = getPortfolioItems();
 
   return (
-    <section id="portfolio" className="bg-white py-16">
+    <section id="portfolio" className="bg-[#F9FAFB] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="font-display text-3xl font-extrabold text-brand-night sm:text-4xl">Our Mobile App Portfolio</h2>
-          <p className="mx-auto mt-4 max-w-3xl text-slate-600">Live projects across e-commerce, healthcare, education, and fast-growing startup segments.</p>
+        <div className="text-center mb-16">
+          <h2 className="font-display text-4xl font-extrabold text-brand-night sm:text-5xl mb-6">Our Mobile App Portfolio</h2>
+          <p className="mx-auto max-w-2xl text-lg text-slate-600">Explore our extensive portfolio of mobile applications across various industries, from global travel leaders to innovative educational platforms.</p>
         </div>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-2">
-          <button 
-            className={`tab-btn ${activeTab === 'ecommerce' ? 'active' : ''}`}
-            onClick={() => setActiveTab('ecommerce')}
-          >
-            E-commerce
-          </button>
-          <button 
-            className={`tab-btn ${activeTab === 'healthcare' ? 'active' : ''}`}
-            onClick={() => setActiveTab('healthcare')}
-          >
-            Healthcare
-          </button>
-          <button 
-            className={`tab-btn ${activeTab === 'education' ? 'active' : ''}`}
-            onClick={() => setActiveTab('education')}
-          >
-            Education & Tech
-          </button>
+        {/* Categories Tab */}
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
+          {['all', 'travel', 'education', 'food', 'ecommerce', 'realestate'].map((tab) => (
+            <button 
+              key={tab}
+              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                activeTab === tab 
+                  ? 'bg-brand-night text-white shadow-lg' 
+                  : 'bg-white text-slate-600 hover:bg-slate-50 border border-slate-200'
+              }`}
+              onClick={() => setActiveTab(tab as CategoryType)}
+            >
+              {tab === 'all' ? 'All' : 
+               tab === 'travel' ? 'Travel & Hospitality' : 
+               tab === 'education' ? 'Education & Learning' : 
+               tab === 'food' ? 'Food & Delivery' : 
+               tab === 'ecommerce' ? 'E-Commerce' : 'Real Estate'}
+            </button>
+          ))}
         </div>
 
-        <div className="mt-8">
-          <div className="portfolio-grid fade-in">
-            {portfolioData[activeTab].map((item, idx) => (
-              <a key={idx} href={item.url} target="_blank" rel="noopener noreferrer" className="portfolio-item">
-                <img src={item.img} alt={item.name} />
-                <span>{item.name}</span>
-              </a>
-            ))}
-          </div>
+        {/* Portfolio Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {displayItems.map((item, idx) => (
+            <a key={idx} href={item.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08)] border border-slate-100 flex flex-col group transition-all duration-500 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.12)] hover:-translate-y-2">
+              {/* Image */}
+              <div className="relative aspect-[4/3] overflow-hidden bg-slate-50 p-6 pb-0">
+                <div className="relative w-full h-full rounded-t-xl overflow-hidden shadow-lg border border-slate-200/60 bg-white">
+                  <img src={item.img} alt={item.name} className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+
+              {/* Title */}
+              <div className="px-6 pt-5 pb-4">
+                <h3 className="text-lg font-bold text-brand-night group-hover:text-amber-500 transition-colors">{item.name} App Design</h3>
+              </div>
+
+              {/* Bottom Info Strip — 2x2 grid */}
+              <div className="grid grid-cols-2 border-t border-slate-200 mt-auto">
+                <div className="px-5 py-3 border-r border-b border-slate-200">
+                  <span className="block text-[9px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Client</span>
+                  <span className="block text-xs font-bold text-brand-night">{item.name}</span>
+                </div>
+                <div className="px-5 py-3 border-b border-slate-200">
+                  <span className="block text-[9px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Platform</span>
+                  <span className="block text-xs font-bold text-brand-night">Android & iOS</span>
+                </div>
+                <div className="px-5 py-3 border-r border-slate-200">
+                  <span className="block text-[9px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Timeline</span>
+                  <span className="block text-xs font-bold text-brand-night">45 Days</span>
+                </div>
+                <div className="px-5 py-3">
+                  <span className="block text-[9px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Tech</span>
+                  <span className="block text-xs font-bold text-brand-night">{item.tech}</span>
+                </div>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>
