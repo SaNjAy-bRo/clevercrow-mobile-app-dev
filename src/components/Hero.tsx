@@ -13,7 +13,6 @@ export default function Hero() {
     if (!parallaxRoot) return;
     
     const parallaxItems = parallaxRoot.querySelectorAll<HTMLElement>('[data-parallax]');
-    const heroLanes = parallaxRoot.querySelectorAll<HTMLElement>('.hero-diagonal-lane');
 
     if (!prefersReducedMotion && parallaxItems.length > 0) {
       const baseTransforms = new Map();
@@ -78,7 +77,7 @@ export default function Hero() {
           100% { transform: translateY(-50%); }
         }
         .animate-scroll-mobile {
-          animation: scroll-mobile 30s linear infinite;
+          animation: scroll-mobile 40s linear infinite;
         }
       `}</style>
 
@@ -113,8 +112,8 @@ export default function Hero() {
             </div>
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a href="#tech-stack" className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-amber text-brand-night px-8 py-4 text-sm font-bold transition hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.3)] shadow-lg">
-                <Cpu className="text-lg" />Explore Our App Stack
+              <a href="#portfolio" className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-amber text-brand-night px-8 py-4 text-sm font-bold transition hover:bg-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.3)] shadow-lg">
+                <Cpu className="text-lg" />Explore Portfolio
               </a>
               <button data-open-modal data-modal-title="Request App Proposal" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white transition hover:bg-white/10 backdrop-blur-md">
                 Get a Quote
@@ -140,15 +139,19 @@ export default function Hero() {
                <div className="relative w-full h-full bg-slate-900 rounded-[2rem] overflow-hidden">
                  {/* Infinite Vertical Scrolling Carousel */}
                  <div className="absolute inset-x-0 top-0 flex flex-col animate-scroll-mobile">
-                   {/* Set 1 */}
-                   <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&h=1300" alt="Mobile App UI" className="w-full aspect-[9/19.5] object-cover shrink-0" />
-                   <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=1300" alt="Mobile App Dashboard" className="w-full aspect-[9/19.5] object-cover shrink-0" />
-                   <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=600&h=1300" alt="Banking App Custom" className="w-full aspect-[9/19.5] object-cover shrink-0" />
+                   {/* Set 1 — Real portfolio screenshots */}
+                   <img src="/mobile apps/traveloka.jpg" alt="Traveloka App" className="w-full aspect-[9/19.5] object-cover shrink-0" />
+                   <img src="/mobile apps/Grubhub .jpg" alt="Grubhub App" className="w-full aspect-[9/19.5] object-cover shrink-0" />
+                   <img src="/mobile apps/ClassDojo.jpg" alt="ClassDojo App" className="w-full aspect-[9/19.5] object-cover shrink-0" />
+                   <img src="/mobile apps/Trulia.jpg" alt="Trulia App" className="w-full aspect-[9/19.5] object-cover shrink-0" />
+                   <img src="/mobile apps/Elevate.jpg" alt="Elevate App" className="w-full aspect-[9/19.5] object-cover shrink-0" />
                    
                    {/* Set 2 (Duplicate for infinite scroll) */}
-                   <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&h=1300" alt="Mobile App UI" className="w-full aspect-[9/19.5] object-cover shrink-0" />
-                   <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=1300" alt="Mobile App Dashboard" className="w-full aspect-[9/19.5] object-cover shrink-0" />
-                   <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=600&h=1300" alt="Banking App Custom" className="w-full aspect-[9/19.5] object-cover shrink-0" />
+                   <img src="/mobile apps/traveloka.jpg" alt="Traveloka App" className="w-full aspect-[9/19.5] object-cover shrink-0" />
+                   <img src="/mobile apps/Grubhub .jpg" alt="Grubhub App" className="w-full aspect-[9/19.5] object-cover shrink-0" />
+                   <img src="/mobile apps/ClassDojo.jpg" alt="ClassDojo App" className="w-full aspect-[9/19.5] object-cover shrink-0" />
+                   <img src="/mobile apps/Trulia.jpg" alt="Trulia App" className="w-full aspect-[9/19.5] object-cover shrink-0" />
+                   <img src="/mobile apps/Elevate.jpg" alt="Elevate App" className="w-full aspect-[9/19.5] object-cover shrink-0" />
                  </div>
                </div>
                

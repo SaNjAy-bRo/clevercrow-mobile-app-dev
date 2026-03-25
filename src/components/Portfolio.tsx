@@ -56,7 +56,7 @@ const portfolioData = {
 type CategoryType = keyof typeof portfolioData | 'all';
 
 export default function Portfolio() {
-  const [activeTab, setActiveTab] = useState<CategoryType>('all');
+  const [activeTab, setActiveTab] = useState<CategoryType>('ecommerce');
 
   const getPortfolioItems = () => {
     if (activeTab === 'all') {
@@ -99,7 +99,7 @@ export default function Portfolio() {
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayItems.map((item, idx) => (
-            <a key={idx} href={item.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.08)] border border-slate-100 flex flex-col group transition-all duration-500 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.12)] hover:-translate-y-2">
+            <a key={idx} href={item.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_-4px_rgba(0,0,0,0.15)] border border-slate-100 flex flex-col group transition-all duration-500 hover:shadow-[0_25px_50px_-10px_rgba(0,0,0,0.25)] hover:-translate-y-2">
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden bg-slate-50 p-6 pb-0">
                 <div className="relative w-full h-full rounded-t-xl overflow-hidden shadow-lg border border-slate-200/60 bg-white">
@@ -109,26 +109,26 @@ export default function Portfolio() {
 
               {/* Title */}
               <div className="px-6 pt-5 pb-4">
-                <h3 className="text-lg font-bold text-brand-night group-hover:text-amber-500 transition-colors">{item.name} App Design</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-brand-night group-hover:text-amber-500 transition-colors">{item.name} App Design</h3>
               </div>
 
               {/* Bottom Info Strip — 2x2 grid */}
               <div className="grid grid-cols-2 border-t border-slate-200 mt-auto">
-                <div className="px-5 py-3 border-r border-b border-slate-200">
-                  <span className="block text-[9px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Client</span>
-                  <span className="block text-xs font-bold text-brand-night">{item.name}</span>
+                <div className="px-5 py-3.5 border-r border-b border-slate-200">
+                  <span className="block text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Client</span>
+                  <span className="block text-sm sm:text-base font-bold text-brand-night">{item.name}</span>
                 </div>
-                <div className="px-5 py-3 border-b border-slate-200">
-                  <span className="block text-[9px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Platform</span>
-                  <span className="block text-xs font-bold text-brand-night">Android & iOS</span>
+                <div className="px-5 py-3.5 border-b border-slate-200">
+                  <span className="block text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Platform</span>
+                  <span className="block text-sm sm:text-base font-bold text-brand-night">Android & iOS</span>
                 </div>
-                <div className="px-5 py-3 border-r border-slate-200">
-                  <span className="block text-[9px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Timeline</span>
-                  <span className="block text-xs font-bold text-brand-night">45 Days</span>
+                <div className="px-5 py-3.5 border-r border-slate-200">
+                  <span className="block text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Timeline</span>
+                  <span className="block text-sm sm:text-base font-bold text-brand-night">45 Days</span>
                 </div>
-                <div className="px-5 py-3">
-                  <span className="block text-[9px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Tech</span>
-                  <span className="block text-xs font-bold text-brand-night">{item.tech}</span>
+                <div className="px-5 py-3.5">
+                  <span className="block text-[10px] sm:text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">Tech</span>
+                  <span className="block text-sm sm:text-base font-bold text-brand-night">{item.tech}</span>
                 </div>
               </div>
             </a>

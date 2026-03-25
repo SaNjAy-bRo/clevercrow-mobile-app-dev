@@ -5,13 +5,11 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LogoTicker from "@/components/LogoTicker";
 import TechStack from "@/components/TechStack";
-
 import CTABanner from "@/components/CTABanner";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
-import StickyCTA from "@/components/StickyCTA";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function Home() {
@@ -80,13 +78,11 @@ export default function Home() {
       </div>
       <LogoTicker />
       <TechStack />
-
-      <CTABanner />
       <Portfolio />
+      <CTABanner />
       <Testimonials />
       <FAQ />
       <Footer />
-      <StickyCTA onOpenModal={openModal} />
       <QuoteModal isOpen={modalOpen} title={modalTitle} onClose={closeModal} />
     </>
   );
