@@ -99,7 +99,7 @@ export default function Portfolio() {
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayItems.map((item, idx) => (
-            <a key={idx} href={item.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_-4px_rgba(0,0,0,0.15)] border border-slate-100 flex flex-col group transition-all duration-500 hover:shadow-[0_25px_50px_-10px_rgba(0,0,0,0.25)] hover:-translate-y-2">
+            <a key={idx} href={item.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl overflow-hidden shadow-[0_12px_40px_-4px_rgba(0,0,0,0.2)] border border-slate-100 flex flex-col group transition-all duration-500 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.35)] hover:-translate-y-3">
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden bg-slate-50 p-6 pb-0">
                 <div className="relative w-full h-full rounded-t-xl overflow-hidden shadow-lg border border-slate-200/60 bg-white">
