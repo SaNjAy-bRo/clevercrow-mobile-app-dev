@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LogoTicker from "@/components/LogoTicker";
 import TechStack from "@/components/TechStack";
-import Pricing from "@/components/Pricing";
+
 import CTABanner from "@/components/CTABanner";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
@@ -80,7 +80,7 @@ export default function Home() {
       </div>
       <LogoTicker />
       <TechStack />
-      <Pricing />
+
       <CTABanner />
       <Portfolio />
       <Testimonials />
