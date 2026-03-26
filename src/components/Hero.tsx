@@ -4,12 +4,12 @@ import { useEffect, useRef } from 'react';
 import { Smartphone, Users, Rocket, Zap, Cpu } from "lucide-react";
 
 const heroApps = [
-  { src: '/mobile apps/traveloka.jpg', alt: 'Traveloka' },
-  { src: '/mobile apps/Grubhub .jpg', alt: 'Grubhub' },
-  { src: '/mobile apps/ClassDojo.jpg', alt: 'ClassDojo' },
-  { src: '/mobile apps/krave mart.jpg', alt: 'Krave Mart' },
-  { src: '/mobile apps/Trulia.jpg', alt: 'Trulia' },
-  { src: '/mobile apps/Elevate.jpg', alt: 'Elevate' },
+  { src: '/mobile apps/hero/hero2.jpeg', alt: 'Travel App' },
+  { src: '/mobile apps/hero/hero1.jpeg', alt: 'Food Delivery App' },
+  { src: '/mobile apps/hero/hero5.jpeg', alt: 'E-Commerce App' },
+  { src: '/mobile apps/hero/hero3.jpeg', alt: 'Education App' },
+  { src: '/mobile apps/hero/hero4.jpeg', alt: 'Real Estate App' },
+  { src: '/mobile apps/hero/hero6.jpeg', alt: 'Fitness App' },
 ];
 
 export default function Hero() {
@@ -80,23 +80,7 @@ export default function Hero() {
       <div className="hero-noise"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(56,189,248,.15),transparent_45%),radial-gradient(circle_at_85%_20%,rgba(45,212,191,.15),transparent_40%),radial-gradient(circle_at_65%_80%,rgba(30,64,175,.2),transparent_42%)]"></div>
 
-      <style>{`
-        @keyframes float-slow {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-12px); }
-        }
-        @keyframes float-medium {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-18px); }
-        }
-        @keyframes float-fast {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
-        .float-slow { animation: float-slow 6s ease-in-out infinite; }
-        .float-medium { animation: float-medium 5s ease-in-out infinite 0.5s; }
-        .float-fast { animation: float-fast 4s ease-in-out infinite 1s; }
-      `}</style>
+
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
@@ -149,58 +133,46 @@ export default function Hero() {
             <div className="relative w-full max-w-[420px] sm:max-w-[480px] h-[400px] sm:h-[460px] lg:h-[500px]">
 
               {/* Back-left phone */}
-              <div className="absolute left-0 sm:left-2 top-8 sm:top-6 w-[140px] sm:w-[165px] float-slow z-10">
+              <div className="absolute left-0 sm:left-2 top-8 sm:top-6 w-[140px] sm:w-[165px] z-10">
                 <div className="rounded-[1.5rem] sm:rounded-[1.8rem] border-[6px] sm:border-[8px] border-slate-800/90 bg-slate-900 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] overflow-hidden transform -rotate-6 hover:rotate-0 transition-transform duration-700">
                   <div className="relative aspect-[9/16] overflow-hidden">
-                    <img src={heroApps[0].src} alt={heroApps[0].alt} className="w-full h-full object-cover object-top" />
+                    <img src={heroApps[0].src} alt={heroApps[0].alt} className="w-full h-full object-cover object-center" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
-                </div>
-                <div className="mt-3 text-center">
-                  <span className="text-[10px] sm:text-xs font-semibold text-slate-400 bg-white/5 rounded-full px-3 py-1 border border-white/10">{heroApps[0].alt}</span>
                 </div>
               </div>
 
               {/* Center phone — largest, most prominent */}
-              <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[170px] sm:w-[200px] float-medium z-30">
+              <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[170px] sm:w-[200px] z-30">
                 <div className="rounded-[1.8rem] sm:rounded-[2rem] border-[7px] sm:border-[10px] border-black bg-black shadow-[0_30px_80px_-10px_rgba(0,0,0,0.9),0_0_0_1px_rgba(255,255,255,0.08)_inset] overflow-hidden transform hover:scale-105 transition-transform duration-700">
                   {/* Notch */}
                   <div className="absolute top-1 left-1/2 -translate-x-1/2 w-16 sm:w-20 h-4 sm:h-5 rounded-full bg-black z-30"></div>
                   <div className="relative aspect-[9/16] overflow-hidden">
-                    <img src={heroApps[1].src} alt={heroApps[1].alt} className="w-full h-full object-cover object-top" />
+                    <img src={heroApps[1].src} alt={heroApps[1].alt} className="w-full h-full object-cover object-center" />
                   </div>
                   {/* Home indicator */}
                   <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1/3 h-1 rounded-full bg-white/40 z-30"></div>
                 </div>
-                <div className="mt-3 text-center">
-                  <span className="text-[10px] sm:text-xs font-bold text-white bg-brand-amber/20 rounded-full px-3 py-1 border border-brand-amber/30">{heroApps[1].alt}</span>
-                </div>
               </div>
 
               {/* Back-right phone */}
-              <div className="absolute right-0 sm:right-2 top-8 sm:top-6 w-[140px] sm:w-[165px] float-fast z-10">
+              <div className="absolute right-0 sm:right-2 top-8 sm:top-6 w-[140px] sm:w-[165px] z-10">
                 <div className="rounded-[1.5rem] sm:rounded-[1.8rem] border-[6px] sm:border-[8px] border-slate-800/90 bg-slate-900 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] overflow-hidden transform rotate-6 hover:rotate-0 transition-transform duration-700">
                   <div className="relative aspect-[9/16] overflow-hidden">
-                    <img src={heroApps[2].src} alt={heroApps[2].alt} className="w-full h-full object-cover object-top" />
+                    <img src={heroApps[2].src} alt={heroApps[2].alt} className="w-full h-full object-cover object-center" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
-                </div>
-                <div className="mt-3 text-center">
-                  <span className="text-[10px] sm:text-xs font-semibold text-slate-400 bg-white/5 rounded-full px-3 py-1 border border-white/10">{heroApps[2].alt}</span>
                 </div>
               </div>
 
               {/* Bottom row — smaller floating app cards */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-3 sm:gap-4 z-20">
                 {heroApps.slice(3).map((app, i) => (
-                  <div key={i} className={`${i === 1 ? 'float-medium' : i === 0 ? 'float-fast' : 'float-slow'}`}>
+                  <div key={i}>
                     <div className="w-[80px] sm:w-[100px] rounded-xl sm:rounded-2xl border-[4px] sm:border-[5px] border-slate-800/80 bg-slate-900 shadow-[0_10px_30px_-5px_rgba(0,0,0,0.6)] overflow-hidden hover:scale-110 transition-transform duration-500">
                       <div className="aspect-[9/16] overflow-hidden">
-                        <img src={app.src} alt={app.alt} className="w-full h-full object-cover object-top" />
+                        <img src={app.src} alt={app.alt} className="w-full h-full object-cover object-center" />
                       </div>
-                    </div>
-                    <div className="mt-2 text-center">
-                      <span className="text-[8px] sm:text-[10px] font-semibold text-slate-500">{app.alt}</span>
                     </div>
                   </div>
                 ))}

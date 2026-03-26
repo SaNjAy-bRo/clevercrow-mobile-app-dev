@@ -51,6 +51,19 @@ const portfolioData = {
     { name: 'ACN', img: '/mobile apps/ACN.jpg', tech: 'Flutter, Go', url: 'https://play.google.com/store/apps/details?id=com.acnonline.in' },
     { name: 'Trulia', img: '/mobile apps/Trulia.jpg', tech: 'React Native, Node.js', url: 'https://play.google.com/store/apps/details?id=com.trulia.android' },
   ],
+  saas: [
+    { name: 'Calendly', img: '/mobile apps/Calendly Mobile.jpg', tech: 'React Native, Node.js', url: 'https://play.google.com/store/apps/details?id=com.calendly.app' },
+    { name: 'Expensify', img: '/mobile apps/Expensify .jpg', tech: 'React Native, Python', url: 'https://play.google.com/store/apps/details?id=org.me.mobiexpensifyg' },
+    { name: 'Fabulous', img: '/mobile apps/Fabulous Daily Routine Planner.jpg', tech: 'Flutter, Firebase', url: 'https://play.google.com/store/apps/details?id=co.thefabulous.app' },
+    { name: 'OpenTable', img: '/mobile apps/OpenTable.jpg', tech: 'Kotlin, Swift', url: 'https://play.google.com/store/apps/details?id=com.opentable' },
+    { name: 'Procore', img: '/mobile apps/Procore.jpg', tech: 'React Native, Ruby', url: 'https://play.google.com/store/apps/details?id=com.procore.activities' },
+    { name: 'ServiceTitan', img: '/mobile apps/ServiceTitan Mobile .jpg', tech: 'Flutter, Go', url: 'https://play.google.com/store/apps/details?id=com.servicetitan.mobile' },
+    { name: 'Square POS', img: '/mobile apps/Square Point of Sale.jpg', tech: 'Kotlin, Node.js', url: 'https://play.google.com/store/apps/details?id=com.squareup' },
+    { name: 'Stripe Dashboard', img: '/mobile apps/Stripe Dashboard.jpg', tech: 'React Native, Ruby', url: 'https://play.google.com/store/apps/details?id=com.stripe.android.dashboard' },
+    { name: 'Taskade', img: '/mobile apps/Taskade.jpg', tech: 'Flutter, Node.js', url: 'https://play.google.com/store/apps/details?id=com.taskade.mobile' },
+    { name: 'Toggl Track', img: '/mobile apps/Toggl Track.jpg', tech: 'Kotlin, PostgreSQL', url: 'https://play.google.com/store/apps/details?id=com.toggl.giskard' },
+    { name: 'Veracross', img: '/mobile apps/Veracross .jpg', tech: 'React Native, AWS', url: 'https://play.google.com/store/apps/details?id=com.veracross.veracross' },
+  ],
 };
 
 type CategoryType = keyof typeof portfolioData | 'all';
@@ -60,7 +73,7 @@ export default function Portfolio() {
 
   const getPortfolioItems = () => {
     if (activeTab === 'all') {
-      return [...portfolioData.travel, ...portfolioData.education, ...portfolioData.food, ...portfolioData.ecommerce, ...portfolioData.realestate];
+      return [...portfolioData.travel, ...portfolioData.education, ...portfolioData.food, ...portfolioData.ecommerce, ...portfolioData.realestate, ...portfolioData.saas];
     }
     return portfolioData[activeTab];
   };
@@ -77,7 +90,7 @@ export default function Portfolio() {
 
         {/* Categories Tab */}
         <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {['all', 'travel', 'education', 'food', 'ecommerce', 'realestate'].map((tab) => (
+          {['all', 'travel', 'education', 'food', 'ecommerce', 'realestate', 'saas'].map((tab) => (
             <button 
               key={tab}
               className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
@@ -91,7 +104,8 @@ export default function Portfolio() {
                tab === 'travel' ? 'Travel & Hospitality' : 
                tab === 'education' ? 'Education & Learning' : 
                tab === 'food' ? 'Food & Delivery' : 
-               tab === 'ecommerce' ? 'E-Commerce' : 'Real Estate'}
+               tab === 'ecommerce' ? 'E-Commerce' : 
+               tab === 'realestate' ? 'Real Estate' : 'SaaS & Productivity'}
             </button>
           ))}
         </div>
@@ -101,10 +115,8 @@ export default function Portfolio() {
           {displayItems.map((item, idx) => (
             <a key={idx} href={item.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl overflow-hidden shadow-[0_12px_40px_-4px_rgba(0,0,0,0.2)] border border-slate-100 flex flex-col group transition-all duration-500 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.35)] hover:-translate-y-3">
               {/* Image */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-slate-50 p-6 pb-0">
-                <div className="relative w-full h-full rounded-t-xl overflow-hidden shadow-lg border border-slate-200/60 bg-white">
-                  <img src={item.img} alt={item.name} className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
-                </div>
+              <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100" style={{ aspectRatio: '1021/650' }}>
+                <img src={item.img} alt={item.name} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" />
               </div>
 
               {/* Title */}
