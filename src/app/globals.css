@@ -43,6 +43,60 @@
   }
 }
 
+/* ===== Navbar responsive styles ===== */
+/* Call button: icon-only circle on mobile, full pill on desktop */
+.nav-call-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--brand-amber);
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0f172a;
+  transition: filter 0.15s;
+  white-space: nowrap;
+}
+.nav-call-btn:hover { filter: brightness(0.95); }
+
+.nav-call-icon { width: 1.35rem; height: 1.35rem; }
+.nav-call-text { display: none; }
+.nav-call-label { display: none; }
+
+.nav-whatsapp-btn {
+  display: none; /* hidden on mobile */
+}
+
+@media (min-width: 768px) {
+  .nav-call-btn {
+    padding: 0.625rem 1.25rem;
+    gap: 0.5rem;
+  }
+  .nav-call-icon { width: 1rem; height: 1rem; }
+  .nav-call-text { display: inline; }
+
+  .nav-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    background: var(--brand-leaf);
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    transition: filter 0.15s;
+  }
+  .nav-whatsapp-btn:hover { filter: brightness(1.1); }
+}
+
+@media (min-width: 1024px) {
+  .nav-call-label { display: inline; }
+}
+
 :root {
   --brand-night: #0c1220;
   --brand-ink: #141f36;
