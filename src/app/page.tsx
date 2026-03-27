@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LogoTicker from "@/components/LogoTicker";
-import TechStack from "@/components/TechStack";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import CTABanner from "@/components/CTABanner";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
@@ -77,7 +77,7 @@ export default function Home() {
         <Hero />
       </div>
       <LogoTicker />
-      <TechStack />
+      <WhyChooseUs />
       <Portfolio />
       <CTABanner />
       <Testimonials />
